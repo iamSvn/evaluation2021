@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>0689107D-A3C7-47BB-BE0B-0D5AC6DD07E4@2x</title>
+    <defs>
+        <path d="M284.001712,1069 C276.821151,1069 271,1074.82115 271,1082.00171 C271,1089.17885 276.821151,1095 284.001712,1095 C291.178849,1095 297,1089.17885 297,1082.00171 C297,1074.82115 291.178849,1069 284.001712,1069 L284.001712,1069 Z M290,1087.18803 C290,1087.58154 289.816667,1088 289.446667,1088 L286.333333,1088 L286.333333,1083.08108 L287.916667,1083.08108 L288.156667,1080.97297 L286.333333,1080.97297 L286.333333,1079.71478 C286.333333,1079.15262 286.476667,1078.86486 287.243333,1078.86486 L288.333333,1078.86486 L288.333333,1077.02695 C288,1077.00235 287.483333,1076.94965 286.806667,1076.94965 C285.4,1076.94965 284.333333,1077.85614 284.333333,1079.52154 L284.333333,1080.97297 L282.666667,1080.97297 L282.666667,1083.08108 L284.333333,1083.08108 L284.333333,1088 L278.56,1088 C278.186667,1088 278,1087.58154 278,1087.18803 L278,1075.71289 C278,1075.31938 278.186667,1075 278.56,1075 L289.446667,1075 C289.816667,1075 290,1075.31938 290,1075.71289 L290,1087.18803 L290,1087.18803 Z" id="path-1"></path>
+        <filter x="-26.9%" y="-19.2%" width="153.8%" height="153.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.123880026 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-News" transform="translate(-267.000000, -1166.000000)">
+            <g id="Facebook" transform="translate(0.000000, 99.000000)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

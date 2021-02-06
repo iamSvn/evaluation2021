@@ -1,0 +1,19 @@
+ion-footer {
+  background-color: var(--ioncolor-black-1);
+
+  ion-toolbar {
+    padding: 20px 20px 0px 20px;
+    background-color: var(--ioncolor-black-1);
+  }
+
+  .footerTag {
+    color: #5D5D5E;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 38px;
+  }
+}

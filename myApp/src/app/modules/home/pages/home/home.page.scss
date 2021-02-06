@@ -1,0 +1,112 @@
+ion-header {
+  border-bottom: 2px solid var(--ion-color-grey-1);
+
+  ion-toolbar {
+    padding: 10px 15px;
+  }
+}
+
+ion-content {
+  .topNewsContainer,
+  .popularNewsContainer {
+    padding: 15px;
+
+    ion-col {
+      padding: 0;
+    }
+
+    .headerTag {
+      color: var(--ion-color-light-contrast);
+      font-family: Inter;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 45px;
+    }
+
+    .underLine {
+      height: 1px;
+      width: 30px;
+      background-color: var(--ion-color-blue-1);
+    }
+  }
+
+  .topNewsContainer {
+    .topNewsRow {
+      margin-top: 18px;
+
+      .col-1 {
+        .top-news-img {
+          height: 183px;
+          width: 326px;
+        }
+      }
+
+      .col-2 {
+        margin-top: 18px;
+        margin-bottom: 4px;
+        .title {
+          color: var(--ion-color-light-contrast);
+          font-family: Inter;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0;
+          line-height: 24px;
+        }
+      }
+
+      .col-3 {
+        .description {
+          color: var(--ion-color-grey-2);
+          font-family: Inter;
+          font-size: 13px;
+          letter-spacing: 0;
+          line-height: 20px;
+        }
+      }
+
+      .col-4 {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  // .popularNewsContainer {
+
+  //   .newsLoopDiv:last-child {
+  //   .newsRow {
+  //     border-bottom: 0;
+  //   }
+  //   }
+
+
+  // }
+
+  .topNewsContainer,
+  .popularNewsContainer {
+    .sourceDiv {
+      color: var(--ion-color-grey-2);
+      font-family: Inter;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 15px;
+      background: var(--ion-color-grey-3);
+      border: 1px solid var(--ion-color-grey-4);
+      display: inline-block;
+      padding: 6px 15px;
+      border-radius: 23px;
+    }
+
+    .addBookmarkDiv {
+      vertical-align: middle;
+      float: right;
+    }
+  }
+}
+
+
+.centerAlignIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

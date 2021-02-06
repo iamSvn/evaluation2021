@@ -1,0 +1,34 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="logoContent" slot="start">
+      <!-- <ion-img
+        src="assets/images/home/logo.svg"
+        alt="logo-icon"
+        class="logo-icon"
+      ></ion-img> -->
+      <!-- <span class="arrow-back left"></span> -->
+      <ion-icon name="arrow-round-back" class="arrow-round-back" (click) = "goBack()"></ion-icon>
+      <ion-text class="bookmarkTag">Bookmark News</ion-text>
+
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openSearch()">
+        <ion-img
+          src="assets/images/shared/search.svg"
+          alt="search-icon"
+          class="search-icon"
+        ></ion-img>
+        <!-- <ion-badge color='palette-purple'>{{cartItemsCount}}</ion-badge> -->
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="newsLoopDiv" *ngFor = "let news of bookmarkedNews">
+    <app-article-card [news] = "news" (ctaEmitter) = "ctaFunction($event)"
+    [isBookmarked] = "isNewsBookmarked(news)"></app-article-card>
+    </div>
+</ion-content>
+<app-footer>
+</app-footer>

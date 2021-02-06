@@ -1,0 +1,35 @@
+<ion-row class="newsRow">
+  <ion-col size="4" class="leftCol" (click) ="ctaFunction('details')">
+   <ion-img
+   [src]="news?.imageUrl"
+   alt="news-img"
+   class="news-img"
+ ></ion-img>
+  </ion-col>
+  <ion-col size="8" class="rightCol">
+    <ion-row>
+      <ion-col size="12" class="row-1" (click) ="ctaFunction('details')">
+        <div class="title">
+          {{news?.title}}
+         </div>
+      </ion-col>
+      <ion-col size="12" class="row-2" (click) ="ctaFunction('details')">
+        <div class="description">
+          {{news?.description}}
+         </div>
+      </ion-col>
+      <ion-col size="12" class="row-3">
+        <div class="sourceDiv">
+          {{getSource(news)}}
+         </div>
+         <div class="addBookmarkDiv" (click) ="ctaFunction('addBookmark')">
+          <ion-img
+          [src]=" isBookmarked ? 'assets/images/shared/bookmarked.svg' : 'assets/images/shared/bookmark.svg' "
+          alt="add-bookmark-icon"
+          class="add-bookmark-icon"
+        ></ion-img>
+         </div>
+      </ion-col>
+    </ion-row>
+   </ion-col>
+</ion-row>

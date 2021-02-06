@@ -1,0 +1,95 @@
+<ion-header class="ion-no-border" *ngIf = "!isSearchEnabled">
+  <ion-toolbar>
+    <div class="logoContent" slot="start">
+      <ion-img
+        src="assets/images/home/logo.svg"
+        alt="logo-icon"
+        class="logo-icon"
+      ></ion-img>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openBookmarks()">
+        <ion-img
+          src="assets/images/home/bookmark.svg"
+          alt="bookmark-icon"
+          class="bookmark-icon"
+        ></ion-img>
+      </ion-button>
+      <ion-button (click)="openSearch()">
+        <ion-img
+          src="assets/images/shared/search.svg"
+          alt="search-icon"
+          class="search-icon"
+        ></ion-img>
+        <!-- <ion-badge color='palette-purple'>{{cartItemsCount}}</ion-badge> -->
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header *ngIf = "isSearchEnabled" (ionBlur) = "toggleSearchFlag()">
+  <ion-row>
+  <ion-col size="2" class="centerAlignIcon">
+    <ion-icon name="arrow-round-back" class="arrow-round-back" (click) = "toggleSearchFlag()"></ion-icon>
+  </ion-col>
+  <ion-col size="10">
+    <ion-searchbar (ionChange) = "valueChanged($event)"></ion-searchbar>
+  </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <div class="topNewsContainer" *ngIf = "topNews">
+     <ion-text class="headerTag">Top News</ion-text>
+     <div class="underLine"></div>
+
+     <ion-row class="topNewsRow">
+       <ion-col size="12" class="col-1">
+        <ion-img
+        [src]="topNews[0]?.imageUrl"
+        alt="top-news-img"
+        class="top-news-img"
+      ></ion-img>
+       </ion-col>
+       <ion-col size="12" class="col-2">
+         <ion-text class="title">
+          {{topNews[0]?.title}}
+         </ion-text>
+        </ion-col>
+       <ion-col size="12" class="col-3">
+        <ion-text class="description">
+          {{topNews[0]?.description}}
+         </ion-text>
+       </ion-col>
+       <ion-col size="12" class="col-4">
+         <div class="sourceDiv">
+          {{getSource()}}
+         </div>
+          <div class="addBookmarkDiv" (click) = "addToBookmarks(topNews[0])">
+          <ion-img
+          [src]=" isNewsBookmarked(topNews[0]) ? 'assets/images/shared/bookmarked.svg' : 'assets/images/shared/bookmark.svg' "
+          alt="add-bookmark-icon"
+          class="add-bookmark-icon"
+        ></ion-img>
+         </div>
+       </ion-col>
+     </ion-row>
+
+  </div>
+  <div class="popularNewsContainer" *ngIf = "popularNewsBatch">
+    <ion-text class="headerTag">Popular News</ion-text>
+    <div class="underLine"></div>
+
+    <div class="newsLoopDiv" *ngFor = "let news of popularNewsBatch">
+    <app-article-card [news] = "news" (ctaEmitter) = "ctaFunction($event)" [isBookmarked] = "isNewsBookmarked(news)"></app-article-card>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>
+
+<app-footer>
+</app-footer>

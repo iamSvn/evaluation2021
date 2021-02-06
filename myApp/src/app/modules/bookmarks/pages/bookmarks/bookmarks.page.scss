@@ -1,0 +1,41 @@
+ion-header {
+  border-bottom: 2px solid var(--ion-color-grey-1);
+
+  ion-toolbar {
+    padding: 10px 15px;
+
+
+    .arrow-back {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+    }
+
+    .left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+
+    .arrow-round-back {
+      font-size: 20px;
+    }
+
+    .bookmarkTag {
+      color: #000000;
+      font-family: Inter;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 45px;
+      margin-left: 25px;
+    }
+
+  }
+}
+
+
+ion-content {
+  .newsLoopDiv {
+    padding: 15px;
+  }
+}

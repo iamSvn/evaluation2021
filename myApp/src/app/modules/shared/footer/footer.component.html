@@ -1,0 +1,32 @@
+<ion-footer>
+  <ion-toolbar color="Dark">
+    <div class="logoContent" slot="start">
+      <ion-img
+        src="assets/images/shared/footer/logo-2.svg"
+        alt="logo-icon"
+        class="logo-icon"
+      ></ion-img>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openFacebook()">
+        <ion-img
+          src="assets/images/shared/footer/facebook.svg"
+          alt="bookmark-icon"
+          class="bookmark-icon"
+        ></ion-img>
+      </ion-button>
+      <ion-button (click)="openTwitter()">
+        <ion-img
+          src="assets/images/shared/footer/twitter.svg"
+          alt="search-icon"
+          class="search-icon"
+        ></ion-img>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-text class="footerTag">
+    Terms of Use  &nbsp; &nbsp; Privacy Policy &nbsp; &nbsp;  Trademarks
+  </ion-text>
+</ion-footer>
